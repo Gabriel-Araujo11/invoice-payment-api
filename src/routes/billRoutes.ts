@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { calculateBill } from '../controllers/billControler';
+import { calculateBill } from '../controllers/billController';
 
 const router = Router();
 
