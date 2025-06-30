@@ -1,9 +1,8 @@
-import { Request, Response } from 'express';
+import { Router } from 'express';
+import { calculateBill } from '../controllers/billControler';
 
-export function calculateBill(req: Request, res: Response) {
-    try {
-        res.status(200).json();
-    } catch (error: any) {
-        res.status(400).json({ error: error.message });
-    }
-}
+const router = Router();
+
+router.post('/calculate-bill', calculateBill);
+
+export default router;
